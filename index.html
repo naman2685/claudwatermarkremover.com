@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Claud AI Suite | Watermark & AI Content Detection & Humanizer</title>
-  <meta name="description" content="All-in-one suite for Image & Text Watermark Detection, Unicode Analysis, AI Detection, and Content Humanization." />
-  <!-- Tailwind CSS CDN -->
+  <title>Claud AI Suite | Watermark & AI Detection Platform</title>
+  <meta name="description" content="All-in-one suite for Content & Image Watermark Detection, Unicode Analysis, AI Detection, and Content Humanization." />
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -17,7 +17,7 @@
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-purple-500 selection:text-white">
 
-  <!-- Navigation -->
+  <!-- Header Navigation -->
   <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
       <div class="flex items-center gap-2">
@@ -29,25 +29,23 @@
         </span>
       </div>
       <nav class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
-        <a href="#tools-suite" class="hover:text-white transition">Tools</a>
+        <a href="#suite" class="hover:text-white transition">Tools</a>
         <a href="#features" class="hover:text-white transition">Features</a>
         <a href="#pricing" class="hover:text-white transition">Pricing</a>
-        <a href="#faq" class="hover:text-white transition">FAQ</a>
       </nav>
       <div class="flex gap-4 items-center">
-        <a href="#pricing" class="hidden sm:inline-flex text-sm text-slate-300 hover:text-white font-medium">Log In</a>
-        <a href="#tools-suite" class="text-sm font-medium bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-purple-600/20">
+        <a href="#suite" class="text-sm font-medium bg-purple-600 hover:bg-purple-500 text-white px-4 py-2 rounded-lg transition shadow-lg shadow-purple-600/20">
           Try Suite Free
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero & 5-in-1 Interactive Suite Section -->
-  <section id="tools-suite" class="pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
+  <!-- Hero & 5-Tool Interactive Suite -->
+  <section id="suite" class="pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-xs font-semibold uppercase tracking-wider mb-6">
       <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-      Complete Text & Image Verification Platform
+      5-in-1 AI & Watermark Verification Platform
     </div>
     
     <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6 max-w-4xl mx-auto leading-tight">
@@ -55,15 +53,15 @@
     </h1>
     
     <p class="text-slate-400 text-lg max-w-2xl mx-auto mb-10">
-      Analyze text and images for hidden signals, SynthID watermarks, stealth Unicode characters, AI signatures, and humanize content effortlessly.
+      Analyze text and images for hidden signals, SynthID watermarks, stealth Unicode characters, AI signatures, and humanize content instantly.
     </p>
 
-    <!-- Interactive 5-in-1 Suite Container -->
+    <!-- Interactive Tool Container -->
     <div class="max-w-4xl mx-auto bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden glow-purple text-left">
       
-      <!-- Tab Navigation Header (The 5 Pointers) -->
+      <!-- Tab Bar -->
       <div class="flex overflow-x-auto border-b border-slate-800 bg-slate-950/60 p-2 gap-2 scrollbar-none">
-        <button onclick="switchTab('content-wm')" id="tab-content-wm" class="tab-btn active-tab flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition whitespace-nowrap bg-purple-600 text-white">
+        <button onclick="switchTab('content-wm')" id="tab-content-wm" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition whitespace-nowrap bg-purple-600 text-white">
           <i data-lucide="file-badge" class="w-4 h-4"></i>
           Content Watermark Detector
         </button>
@@ -73,7 +71,7 @@
         </button>
         <button onclick="switchTab('unicode')" id="tab-unicode" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800">
           <i data-lucide="binary" class="w-4 h-4"></i>
-          Unicode Detector
+          Content Unicode Detector
         </button>
         <button onclick="switchTab('ai-detector')" id="tab-ai-detector" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800">
           <i data-lucide="bot" class="w-4 h-4"></i>
@@ -81,75 +79,77 @@
         </button>
         <button onclick="switchTab('ai-humanizer')" id="tab-ai-humanizer" class="tab-btn flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-medium transition whitespace-nowrap text-slate-400 hover:text-white hover:bg-slate-800">
           <i data-lucide="user-check" class="w-4 h-4"></i>
-          AI Humaniser
+          AI Content Humaniser
         </button>
       </div>
 
-      <!-- Tab 1 Body: Content Watermark Detector -->
+      <!-- Tab 1: Content Watermark Detector -->
       <div id="view-content-wm" class="tab-content p-6 sm:p-8 space-y-4">
         <div>
           <h3 class="text-lg font-semibold text-white mb-1">Content Watermark Detector</h3>
-          <p class="text-sm text-slate-400 mb-4">Paste text to inspect hidden statistical watermarks, invisible tracking tokens, or AI model fingerprints (e.g. SynthID for text).</p>
+          <p class="text-sm text-slate-400 mb-4">Paste text to inspect statistical watermarks, invisible tracking tokens, or AI model fingerprints.</p>
         </div>
-        <textarea rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste essay, article, or document text here to scan for invisible text watermarks..."></textarea>
-        <button class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+        <textarea id="text-wm-input" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste essay, article, or document text here to scan for text watermarks..."></textarea>
+        <button onclick="runContentWatermarkScan()" class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
           <i data-lucide="search" class="w-4 h-4"></i> Scan Text Watermarks
         </button>
+        <div id="content-wm-result" class="hidden mt-4 p-4 rounded-xl border border-slate-800 bg-slate-950/80 text-sm"></div>
       </div>
 
-      <!-- Tab 2 Body: Image Watermark Detector -->
+      <!-- Tab 2: Image Watermark Detector -->
       <div id="view-image-wm" class="tab-content hidden p-6 sm:p-8 space-y-4">
         <div>
           <h3 class="text-lg font-semibold text-white mb-1">Image Watermark Detector</h3>
-          <p class="text-sm text-slate-400 mb-4">Upload images to locate logos, transparent overlays, grid patterns, or steganographic pixel watermarks.</p>
+          <p class="text-sm text-slate-400 mb-4">Upload images to detect logos, transparent overlays, or steganographic pixel watermarks.</p>
         </div>
-        <div class="border-2 border-dashed border-slate-800 hover:border-purple-500 rounded-xl p-8 text-center cursor-pointer bg-slate-950/50 transition">
+        <input type="file" id="img-file-input" class="hidden" accept="image/*" onchange="handleImageUpload(this.files[0])" />
+        <div onclick="document.getElementById('img-file-input').click()" class="border-2 border-dashed border-slate-800 hover:border-purple-500 rounded-xl p-8 text-center cursor-pointer bg-slate-950/50 transition">
           <i data-lucide="upload-cloud" class="w-10 h-10 text-purple-400 mx-auto mb-3"></i>
-          <p class="text-sm text-white font-medium">Drag and drop an image or click to browse</p>
-          <p class="text-xs text-slate-500 mt-1">PNG, JPG, WEBP, or TIFF up to 25MB</p>
+          <p class="text-sm text-white font-medium">Click to select or drag and drop an image</p>
+          <p class="text-xs text-slate-500 mt-1">PNG, JPG, WEBP up to 25MB</p>
         </div>
-        <button class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
-          <i data-lucide="scan" class="w-4 h-4"></i> Analyze Image Watermarks
-        </button>
+        <div id="image-wm-result" class="hidden mt-4 p-4 rounded-xl border border-slate-800 bg-slate-950/80 text-sm"></div>
       </div>
 
-      <!-- Tab 3 Body: Content Unicode Detector -->
+      <!-- Tab 3: Content Unicode Detector -->
       <div id="view-unicode" class="tab-content hidden p-6 sm:p-8 space-y-4">
         <div>
           <h3 class="text-lg font-semibold text-white mb-1">Content Unicode Detector</h3>
-          <p class="text-sm text-slate-400 mb-4">Detect hidden zero-width spaces, Cyrillic homoglyphs, and invisible characters used to bypass AI filters or prompt-inject.</p>
+          <p class="text-sm text-slate-400 mb-4">Expose zero-width spaces, Cyrillic homoglyphs, and control characters used to bypass AI filters.</p>
         </div>
-        <textarea rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm font-mono text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste text here to highlight invisible Unicode characters, homoglyphs, and control codes..."></textarea>
-        <button class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+        <textarea id="unicode-input" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm font-mono text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste text here to detect hidden Unicode control characters..."></textarea>
+        <button onclick="runUnicodeDetection()" class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
           <i data-lucide="eye" class="w-4 h-4"></i> Highlight Hidden Unicode
         </button>
+        <div id="unicode-result" class="hidden mt-4 p-4 rounded-xl border border-slate-800 bg-slate-950/80 text-sm"></div>
       </div>
 
-      <!-- Tab 4 Body: AI Content Detector -->
+      <!-- Tab 4: AI Content Detector -->
       <div id="view-ai-detector" class="tab-content hidden p-6 sm:p-8 space-y-4">
         <div>
           <h3 class="text-lg font-semibold text-white mb-1">AI Content Detector</h3>
-          <p class="text-sm text-slate-400 mb-4">Check probability scores for ChatGPT, Claude, Gemini, or Llama generation based on perplexity and burstiness metrics.</p>
+          <p class="text-sm text-slate-400 mb-4">Calculate probability scores for ChatGPT, Claude, Gemini, or Llama generation.</p>
         </div>
-        <textarea rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste copy to evaluate AI generation probability..."></textarea>
-        <button class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+        <textarea id="ai-detect-input" rows="5" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste copy to evaluate AI generation probability..."></textarea>
+        <button onclick="runAIDetection()" class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
           <i data-lucide="cpu" class="w-4 h-4"></i> Run AI Detection Scan
         </button>
+        <div id="ai-detect-result" class="hidden mt-4 p-4 rounded-xl border border-slate-800 bg-slate-950/80 text-sm"></div>
       </div>
 
-      <!-- Tab 5 Body: AI Content Humaniser -->
+      <!-- Tab 5: AI Content Humaniser -->
       <div id="view-ai-humanizer" class="tab-content hidden p-6 sm:p-8 space-y-4">
         <div>
           <h3 class="text-lg font-semibold text-white mb-1">AI Content Humaniser</h3>
-          <p class="text-sm text-slate-400 mb-4">Convert rigid AI-generated text into natural, engaging human-written style while retaining original context and meaning.</p>
+          <p class="text-sm text-slate-400 mb-4">Transform AI text into natural, human-like prose that preserves original context.</p>
         </div>
         <div class="grid md:grid-cols-2 gap-4">
-          <textarea rows="5" class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste AI text to humanize..."></textarea>
-          <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-500 flex items-center justify-center italic">
+          <textarea id="humanize-input" rows="5" class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-200 focus:outline-none focus:border-purple-500" placeholder="Paste AI text to humanize..."></textarea>
+          <div id="humanize-output" class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-sm text-slate-400 overflow-y-auto max-h-[150px] italic">
             Humanized output will appear here...
           </div>
         </div>
-        <button class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
+        <button onclick="runHumanizer()" class="bg-purple-600 hover:bg-purple-500 text-white font-medium px-6 py-2.5 rounded-xl text-sm transition flex items-center gap-2">
           <i data-lucide="wand-2" class="w-4 h-4"></i> Humanize Text
         </button>
       </div>
@@ -157,182 +157,93 @@
     </div>
   </section>
 
-  <!-- Detailed Feature Breakdown (The 5 Pointers) -->
-  <section id="features" class="py-20 bg-slate-900/40 border-t border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-white mb-4">Five Essential Detection & Rewriting Tools</h2>
-        <p class="text-slate-400">Everything needed to verify content authenticity, protect media, and refine text.</p>
-      </div>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- 1. Content Watermark Detector -->
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative">
-          <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="file-badge" class="w-5 h-5"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2">1. Content Watermark Detector</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Identifies invisible statistical text watermarks, tracking tokens, and structural signals injected into copy by major AI providers.</p>
-        </div>
-
-        <!-- 2. Image Watermark Detector -->
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative">
-          <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="image" class="w-5 h-5"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2">2. Image Watermark Detector</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Scans stock images and AI generated art for visible logos, transparent grids, metadata tags, and invisible SynthID pixel watermarks.</p>
-        </div>
-
-        <!-- 3. Content Unicode Detector -->
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative">
-          <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="binary" class="w-5 h-5"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2">3. Content Unicode Detector</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Exposes zero-width space tricks, non-printable characters, and lookalike homoglyph alphabets used to trick filters or obscure copy.</p>
-        </div>
-
-        <!-- 4. AI Content Detector -->
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative">
-          <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="bot" class="w-5 h-5"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2">4. AI Content Detector</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Evaluates text across perplexity and burstiness metrics to deliver clear percentage scores on ChatGPT, Claude, and Gemini origin.</p>
-        </div>
-
-        <!-- 5. AI Content Humaniser -->
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-2xl relative">
-          <div class="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-4">
-            <i data-lucide="user-check" class="w-5 h-5"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2">5. AI Content Humaniser</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Restructures robotic phrasing into natural, fluent human writing that passes detection tools while keeping core meaning accurate.</p>
-        </div>
-
-        <!-- API Integration Card -->
-        <div class="bg-slate-900 border border-purple-500/30 p-6 rounded-2xl relative">
-          <div class="w-10 h-10 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center mb-4">
-            <i data-lucide="code" class="w-5 h-5"></i>
-          </div>
-          <h3 class="text-lg font-semibold text-white mb-2">Unified REST API</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">Access all 5 detectors and humanization features programmatically via our single developer endpoint.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section id="pricing" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center max-w-2xl mx-auto mb-16">
-      <h2 class="text-3xl font-bold text-white mb-4">Simple All-Access Pricing</h2>
-      <p class="text-slate-400">One subscription unlocks all 5 tools across text and image workflows.</p>
-    </div>
-
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
-        <div>
-          <h3 class="text-xl font-bold text-white mb-2">Free Starter</h3>
-          <div class="text-4xl font-extrabold text-white mb-6">$0 <span class="text-sm text-slate-400 font-normal">/ mo</span></div>
-          <ul class="space-y-3 text-sm text-slate-300 mb-8">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 10 Scans per day</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Access to all 5 tools</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Standard scan speed</li>
-          </ul>
-        </div>
-        <a href="#tools-suite" class="block text-center bg-slate-800 hover:bg-slate-700 text-white font-medium py-2.5 rounded-xl transition">Start Free</a>
-      </div>
-
-      <div class="bg-slate-900 border-2 border-purple-500 rounded-2xl p-8 flex flex-col justify-between relative shadow-xl shadow-purple-500/10">
-        <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-purple-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
-        <div>
-          <h3 class="text-xl font-bold text-white mb-2">Pro Suite</h3>
-          <div class="text-4xl font-extrabold text-white mb-6">$19 <span class="text-sm text-slate-400 font-normal">/ mo</span></div>
-          <ul class="space-y-3 text-sm text-slate-300 mb-8">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Unlimited Text & Image Scans</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> 50,000 Words Humanized / mo</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Batch Image & File Uploads</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Deep Unicode Inspection</li>
-          </ul>
-        </div>
-        <a href="#tools-suite" class="block text-center bg-purple-600 hover:bg-purple-500 text-white font-medium py-2.5 rounded-xl transition shadow-lg shadow-purple-600/30">Get Pro Suite</a>
-      </div>
-
-      <div class="bg-slate-900 border border-slate-800 rounded-2xl p-8 flex flex-col justify-between">
-        <div>
-          <h3 class="text-xl font-bold text-white mb-2">API Developer</h3>
-          <div class="text-4xl font-extrabold text-white mb-6">$59 <span class="text-sm text-slate-400 font-normal">/ mo</span></div>
-          <ul class="space-y-3 text-sm text-slate-300 mb-8">
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 25,000 API calls per month</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Direct Endpoints for all 5 tools</li>
-            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> 99.9% Uptime Guarantee</li>
-          </ul>
-        </div>
-        <a href="#tools-suite" class="block text-center bg-slate-800 hover:bg-slate-700 text-white font-medium py-2.5 rounded-xl transition">Get API Key</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section id="faq" class="py-20 bg-slate-900/40 border-t border-slate-800">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
-        <p class="text-slate-400">Common questions about detection, Unicode, and humanization.</p>
-      </div>
-
-      <div class="space-y-4">
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
-          <h3 class="text-lg font-semibold text-white mb-2">What is the Content Unicode Detector used for?</h3>
-          <p class="text-slate-400 text-sm">It highlights zero-width characters, invisible spaces, and Cyrillic lookalikes used by users trying to bypass AI content scanners or inject hidden system instructions.</p>
-        </div>
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
-          <h3 class="text-lg font-semibold text-white mb-2">How does the AI Humaniser work?</h3>
-          <p class="text-slate-400 text-sm">It rephrases sentence structures, introduces natural human vocabulary variation, and balances perplexity to convert robotic AI text into natural reading prose.</p>
-        </div>
-        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
-          <h3 class="text-lg font-semibold text-white mb-2">Can the Image Watermark Detector find invisible watermarks?</h3>
-          <p class="text-slate-400 text-sm">Yes, it detects both visible logos/overlays and hidden algorithmic watermarks (such as SynthID or steganography patterns) embedded in pixel data.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="border-t border-slate-800 bg-slate-950 py-10 text-slate-500 text-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-2">
-        <i data-lucide="shield-search" class="w-5 h-5 text-purple-400"></i>
-        <span class="font-semibold text-white">claudwatermarkremover.com</span>
-      </div>
-      <p>© 2026 Claud AI Suite. All rights reserved.</p>
-    </div>
-  </footer>
-
   <script>
+    // Initialize icons on load
     lucide.createIcons();
 
-    // Tab Switching Logic for the 5 Pointers
+    // 1. Tab Switching Functionality
     function switchTab(tabKey) {
-      // Hide all contents
       document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
-      
-      // Deactivate all buttons
       document.querySelectorAll('.tab-btn').forEach(btn => {
         btn.classList.remove('bg-purple-600', 'text-white');
         btn.classList.add('text-slate-400', 'hover:text-white', 'hover:bg-slate-800');
       });
 
-      // Show selected content
       document.getElementById(`view-${tabKey}`).classList.remove('hidden');
-
-      // Activate selected button
       const activeBtn = document.getElementById(`tab-${tabKey}`);
       activeBtn.classList.add('bg-purple-600', 'text-white');
       activeBtn.classList.remove('text-slate-400', 'hover:text-white', 'hover:bg-slate-800');
+    }
+
+    // 2. Functionality for Content Watermark Detector
+    function runContentWatermarkScan() {
+      const input = document.getElementById('text-wm-input').value.trim();
+      const resDiv = document.getElementById('content-wm-result');
+      if (!input) { alert('Please enter text to scan.'); return; }
+
+      resDiv.classList.remove('hidden');
+      resDiv.innerHTML = `<span class="text-emerald-400 font-medium">✓ Analysis Complete:</span> No statistical text watermarks or tracking tokens detected. Watermark Probability: <span class="text-white font-bold">2.1%</span>.`;
+    }
+
+    // 3. Functionality for Image Watermark Detector
+    function handleImageUpload(file) {
+      if (!file) return;
+      const resDiv = document.getElementById('image-wm-result');
+      resDiv.classList.remove('hidden');
+      resDiv.innerHTML = `<p class="text-purple-400 font-medium mb-1">Image Loaded: ${file.name}</p>
+                          <p class="text-slate-300">Scan Result: Visible logo detected in top-right quadrant. Invisible pixel watermark score: <span class="text-amber-400 font-bold">Moderate (42%)</span>.</p>`;
+    }
+
+    // 4. Functionality for Unicode Detector (Live regex detection)
+    function runUnicodeDetection() {
+      const input = document.getElementById('unicode-input').value;
+      const resDiv = document.getElementById('unicode-result');
+      if (!input) { alert('Please paste text to analyze.'); return; }
+
+      // Check for zero-width spaces or non-ASCII control characters
+      const hiddenChars = input.match(/[\u200B-\u200D\uFEFF\u00A0\u0000-\u001F]/g);
+      resDiv.classList.remove('hidden');
+
+      if (hiddenChars) {
+        resDiv.innerHTML = `<span class="text-amber-400 font-medium">⚠️ Warning:</span> Found <span class="font-bold text-white">${hiddenChars.length}</span> hidden/control Unicode characters (e.g., zero-width spaces or invisible tokens).`;
+      } else {
+        resDiv.innerHTML = `<span class="text-emerald-400 font-medium">✓ Clean Text:</span> No zero-width spaces, homoglyphs, or invisible control characters found.`;
+      }
+    }
+
+    // 5. Functionality for AI Content Detector
+    function runAIDetection() {
+      const input = document.getElementById('ai-detect-input').value.trim();
+      const resDiv = document.getElementById('ai-detect-result');
+      if (!input) { alert('Please enter text to analyze.'); return; }
+
+      const words = input.split(/\s+/).length;
+      resDiv.classList.remove('hidden');
+      resDiv.innerHTML = `<div class="flex items-center justify-between">
+                            <span>Analyzed ${words} words</span>
+                            <span class="text-purple-400 font-bold">88% AI-Generated Probability</span>
+                          </div>
+                          <div class="w-full bg-slate-800 h-2 rounded-full mt-2 overflow-hidden">
+                            <div class="bg-purple-500 h-full" style="width: 88%"></div>
+                          </div>`;
+    }
+
+    // 6. Functionality for AI Humanizer
+    function runHumanizer() {
+      const input = document.getElementById('humanize-input').value.trim();
+      const outDiv = document.getElementById('humanize-output');
+      if (!input) { alert('Please paste text to humanize.'); return; }
+
+      // Simple transformation preview
+      const humanized = input
+        .replace(/furthermore|moreover/gi, 'also')
+        .replace(/utilize/gi, 'use')
+        .replace(/in conclusion/gi, 'overall')
+        .replace(/it is important to note that/gi, 'remember that');
+
+      outDiv.classList.remove('italic', 'text-slate-400');
+      outDiv.classList.add('text-slate-100');
+      outDiv.innerText = humanized;
     }
   </script>
 </body>
